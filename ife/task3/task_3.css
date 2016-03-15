@@ -1,0 +1,71 @@
+*{
+	margin:0px;
+	padding:0px;
+	font-size:0;
+}
+
+.main {
+	width:auto;
+	height:450px;
+	margin:20px;
+	border:1px #999 solid;
+	background:#eee;
+	position:relative;
+}
+.left,.left img,.mid,.right{
+	border:1px #999 solid;
+}
+
+/*左侧定位*/
+.left {
+	float:left;
+	width:198px;
+	height:118px;
+	margin:20px 10px 20px 20px;
+	background:#fff;
+}
+
+.left img {
+	width:80px;
+	height:80px;
+	margin:20px;
+	display:inline-block;
+	vertical-align: top;
+}
+
+span {
+	display: inline-block;
+	vertical-align: top;
+	margin:20px 0 0 0;
+	font-size:15px;
+}
+
+/*右侧定位*/
+.right {
+	position:absolute;
+	top:20px;
+	right:20px;
+	width:118px;
+	background:#fff;
+	padding:10px 0;
+}
+
+.member img{
+	width:80px;
+	height:80px;
+}
+.member{
+	padding:10px 20px;
+}
+/*中部定位*/
+.mid {
+	margin-left:240px;
+	margin-top:20px;
+	margin-right:160px;
+	background:#fff;
+	padding:20px;
+}
+.text{
+	font-size:15px;
+}
+
