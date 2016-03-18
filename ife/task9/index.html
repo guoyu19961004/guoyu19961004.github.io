@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<title>ife task9</title>
+	<link rel="stylesheet" href="stylesheets/screen.css">
+</head>
+<body>
+	<div class="header">
+		<div class="logo">
+			<img src="images/logo.png" alt="logo">
+		</div>
+		<form action="">
+			<div class="search-icon img-wrap">
+				<img src="images/search-icon.png" alt="search">
+			</div>
+			<input type="text" name="search">
+			<div class="head-login">
+				<img src="images/head-icon.png" alt="login">
+				<a href="">登录</a>
+			</div>
+			<input type="submit" value="登录">
+		</form>
+	</div>
+	<div class="container">
+		<div class="sider-bar">
+			<div class="info">
+				<div class="user-info">
+					<div class="head-portrait">
+						<img src="images/portrait.jpg" alt="head protrait">
+					</div>
+					<h2 class="username">ABC123</h2>
+				</div>
+				<div class="other-info">
+					<div class="collections">
+						<h2 class="collection-amount">110</h2>
+						<p>收藏</p>
+					</div>
+					<div class="fans">
+						<h2>313</h2>
+						<p>粉丝</p>
+					</div>
+				</div>
+			</div>
+			<ul class="nav">
+				<li class="active-list">
+					<span class="img-wrap">
+						<img src="images/baobiao.png" alt="baobiao">
+					</span>
+					<span class="text text-active">个人报表</span>
+					<ul class="data">
+						<li>
+							<span class="path"></span>
+							<span class="img-wrap">
+								<img src="images/folder.png" alt="">
+							</span>
+							<span class="text">文件一</span>
+						</li>
+						<li>
+							<span class="path-active"></span>
+							<span class="img-wrap">
+								<img src="images/folder_acive.png" alt="">
+							</span>
+							<span class="text text-active">文件二</span>
+							<ul class="wendang">
+								<li>
+									<span class="img-wrap">
+										<img src="images/wendang_bai.png" alt="">
+									</span>
+									<span class="text text-active">文档一</span>
+								</li>
+								<li>
+									<span class="img-wrap">
+										<img src="images/wendang.png" alt="">
+									</span>
+									<span class="text">文档二</span>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<span class="path"></span>
+							<span class="img-wrap">
+								<img src="images/folder.png" alt="">
+							</span>
+							<span class="text">文件三</span>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<span class="img-wrap">
+						<img src="images/star.png" alt="baobiao">
+					</span>
+					<span class="text">个人收藏</span>
+				</li>
+				<li>
+					<span class="img-wrap">
+						<img src="images/share.png" alt="baobiao">
+					</span>
+					<span class="text">我的分享</span>
+				</li>
+				<li>
+					<span class="img-wrap">
+						<img src="images/star.png" alt="baobiao">
+					</span>
+					<span class="text">图库</span>
+				</li>
+				<li>
+					<span class="img-wrap">
+						<img src="images/star.png" alt="baobiao">
+					</span>
+					<span class="text">成长记录</span>
+				</li>
+				<li>
+					<span class="img-wrap">
+						<img src="images/account.png" alt="baobiao">
+					</span>
+					<span class="text">账户信息</span>
+				</li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="doc-log">
+				<a href="">C站</a>
+				<span>/</span>
+				<a href="">个人报表</a>
+				<span>/</span>
+				<a href="">文件一</a>
+				<span>/</span>
+				<a href="">文档一</a>
+			</div>
+			<div class="modles">
+				<form action="" class="modle-one">
+					<div class="query select-wrap">
+						<span>查询项</span>
+						<div class="path path-active"></div>
+						<select name="query">
+							<option value="第一项" selected="selected">第一项</option>
+							<option value="第二项">第二项</option>
+							<option value="第三项">第三项</option>
+							<option value="第四项">第四项</option>
+						</select>
+					</div>
+					<div class="deal">
+						<div class="buyer select-wrap">
+							<span>买方</span>
+							<div class="path"></div>
+							<select name="buyer">
+								<option value="第一项" selected="selected">小A</option>
+								<option value="第二项">第二项</option>
+								<option value="第三项">第三项</option>
+								<option value="第四项">第四项</option>
+							</select>
+						</div>
+						<div class="saler select-wrap">
+							<span>卖方</span>
+							<div class="path"></div>
+							<select name="saler">
+								<option value="第一项" selected="selected">小C</option>
+								<option value="第二项">第二项</option>
+								<option value="第三项">第三项</option>
+								<option value="第四项">第四项</option>
+							</select>
+						</div>
+					</div>
+					<div class="change">
+						<p>换</p>
+					</div>
+					<div class="other-query">
+						<div>
+							<div class="date">
+								<span>日期</span>
+								<input type="datetime" value="2016-4-1" name="date">
+							</div>
+							<div class="time-use select-wrap">
+								<span>总耗时</span>
+								<div class="path"></div>
+								<select name="time-use">
+									<option value="第一项" selected="selected">8天</option>
+									<option value="第二项">第二项</option>
+									<option value="第三项">第三项</option>
+									<option value="第四项">第四项</option>
+								</select>
+							</div>
+						</div>
+						<div>
+							<div class="person-number select-wrap">
+								<span>人数</span>
+								<div class="path"></div>
+								<select name="person-number">
+									<option value="第一项" selected="selected">10人</option>
+									<option value="第二项">第二项</option>
+									<option value="第三项">第三项</option>
+									<option value="第四项">第四项</option>
+								</select>
+							</div>
+							<div class="done-number select-wrap">
+								<span>成交项</span>
+								<div class="path"></div>
+								<select name="done-number">
+									<option value="第一项" selected="selected">10项</option>
+									<option value="第二项">第二项</option>
+									<option value="第三项">第三项</option>
+									<option value="第四项">第四项</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<input type="submit" value="搜索">
+				</form>
+				<div class="modle-two">
+					<div class="prev-arrow inline-block arrow"><img src="images/prev_arrow.png" alt=""></div>
+					<ul class="price-display inline-block">
+						<li class="inline-block active-list">
+							<p>10:00 am</p>
+							<h2><span>￥</span>1200</h2>
+						</li>
+						<li class="inline-block">
+							<p>11:00 am</p>
+							<h2><span>￥</span>1300</h2>
+						</li>
+						<li class="inline-block">
+							<p>12:00 am</p>
+							<h2><span>￥</span>1200</h2>
+						</li>
+						<li class="inline-block">
+							<p>01:00 pm</p>
+							<h2><span>￥</span>1400</h2>
+						</li>
+						<li class="inline-block">
+							<p>02:00 pm</p>
+							<h2><span>￥</span>1500</h2>
+						</li>
+						<li class="inline-block">
+							<p>03:00 pm</p>
+							<h2><span>￥</span>1800</h2>
+						</li>
+					</ul>
+					<div class="next-arrow inline-block arrow"><img src="images/next_arrow.png" alt=""></div>
+					<div class="history-query inline-block">
+						<span class="bg-img-wrap inline-block"></span>
+						<span class="inline-block">历史查询</span>
+					</div>
+				</div>
+				<div class="modle-three">
+					<h3>2016年4月份统计</h3>
+					<ul>
+						<li class="inline-block color-green">
+							<div class="text inline-block">
+								<p>133311</p>
+								<span>成交量</span>
+							</div>
+							<div class="color-block inline-block"></div>
+						</li>
+						<li class="inline-block color-blue">
+							<div class="text inline-block">
+								<p>133311</p>
+								<span>成交量</span>
+							</div>
+							<div class="color-block inline-block"></div>
+						</li>
+						<li class="inline-block color-red">
+							<div class="text inline-block">
+								<p>133311</p>
+								<span>成交量</span>
+							</div>
+							<div class="color-block inline-block"></div>
+						</li>
+						<li class="inline-block color-yellow">
+							<div class="text inline-block">
+								<p>133311</p>
+								<span>成交量</span>
+							</div>
+							<div class="color-block inline-block"></div>
+						</li>
+					</ul>
+				</div>
+				<div class="project">
+					<div class="modle-four inline-block">
+						<h3>第一组项目</h3>
+						<ul>
+							<li class="inline-block active">
+								<p>项目一</p>
+								<div class="wrap">
+									<table>
+										<tbody>
+											<tr>
+												<td class="active">购买材料一</td>
+												<td>购买材料一</td>
+												<td>购买材料一</td>
+												<td>购买材料一</td>
+											</tr>
+											<tr>
+												<td>购买材料二</td>
+												<td>购买材料二</td>
+												<td>购买材料二</td>
+												<td>购买材料二</td>
+											</tr>
+											<tr>
+												<td>购买材料四</td>
+												<td>购买材料四</td>
+												<td>购买材料四</td>
+												<td>购买材料四</td>
+											</tr>
+											<tr>
+												<td>购买材料六</td>
+												<td>购买材料六</td>
+												<td>购买材料六</td>
+												<td>购买材料六</td>
+											</tr>
+											<tr>
+												<td>购买材料十三</td>
+												<td>购买材料十三</td>
+												<td>购买材料十三</td>
+												<td>购买材料十三</td>
+											</tr>
+											<tr>
+												<td>购买材料二十</td>
+												<td>购买材料二十</td>
+												<td>购买材料二十</td>
+												<td>购买材料二十</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</li>
+							<li class="inline-block"><p>项目一</p></li>
+							<li class="inline-block"><p>项目一</p></li>
+							<li class="inline-block"><p>项目一</p></li>
+							<li class="inline-block"><p>项目一</p></li>
+						</ul>
+					</div>
+					<div class="modle-five inline-block">
+						<h3>第一组项目</h3>
+						<div class="info">
+							<div class="title">
+								<h4>标题</h4>
+								<p>项目报表三</p>
+							</div>
+							<div class="inline-block price">
+								<h4>价格</h4>
+								<p>￥158</p>
+							</div>
+							<div class="inline-block manager">
+								<h4>负责人</h4>
+								<p>小A</p>
+							</div>
+							<div class="intro">
+								<h4>详细描述</h4>
+								<p>该项目目前负责人是.....</p>
+							</div>
+						</div>
+						<div class="recorrect">
+							<span class="checkbox"></span>
+							<span>遵守保密协议</span>
+							<input type="submit" value="搜索">
+						</div>
+					</div>
+				</div>
+				<div class="present">
+					<div class="canlder inline-block">
+						<h3>日历</h3>
+						<form action="" name="date">
+							<select class="year">
+								<option value="2015">2015年</option>
+								<option value="2016" selected="selected">2016年</option>
+								<option value="2017">2017年</option>
+								<option value="2018">2018年</option>
+							</select>
+							<select class="month">
+								<option value="3">3月</option>
+								<option value="4" selected="selected">4月</option>
+								<option value="5">5月</option>
+								<option value="6">6月</option>
+							</select>
+							<select class="note">
+								<option value="3">标注日期</option>
+								<option value="4" selected="selected">标注日期</option>
+								<option value="5">标注日期</option>
+								<option value="6">标注日期</option>
+							</select>
+							<input type="submit" value="返回今天">
+						</form>
+						<ul>
+							<li class="week">
+								<ul>
+									<li class="inline-block">一</li>
+									<li class="inline-block">二</li>
+									<li class="inline-block">三</li>
+									<li class="inline-block">四</li>
+									<li class="inline-block">五</li>
+									<li class="inline-block">六</li>
+									<li class="inline-block">日</li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li class="inline-block"></li>
+									<li class="inline-block"></li>
+									<li class="inline-block"></li>
+									<li class="inline-block"></li>
+									<li class="inline-block">1<p class="holiday">愚人节</p></li>
+									<li class="inline-block">2<p>廿五</p></li>
+									<li class="inline-block">3<p>廿六</p></li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li class="inline-block">4<p class="holiday">清明</p></li>
+									<li class="inline-block">5<p>廿八</p></li>
+									<li class="inline-block">6<p>廿九</p></li>
+									<li class="inline-block">7<p>三月</p></li>
+									<li class="inline-block">8<p>初二</p></li>
+									<li class="active inline-block">9<p>初三</p></li>
+									<li class="inline-block">10<p>初四</p></li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li class="inline-block">11<p>初五</p></li>
+									<li class="active inline-block">12<p>初六</p></li>
+									<li class="inline-block">13<p>初七</p></li>
+									<li class="inline-block">14<p>初八</p></li>
+									<li class="inline-block">15<p>初九</p></li>
+									<li class="inline-block">16<p>初十</p></li>
+									<li class="inline-block">17<p>十一</p></li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li class="inline-block">18<p>十二</p></li>
+									<li class="active inline-block">19<p>十三</p></li>
+									<li class="inline-block">20<p>十四</p></li>
+									<li class="inline-block">21<p>十五</p></li>
+									<li class="inline-block">22<p>十六</p></li>
+									<li class="inline-block">23<p>十七</p></li>
+									<li class="inline-block">24<p>十八</p></li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li class="inline-block">25<p>十九</p></li>
+									<li class="inline-block">26<p>廿十</p></li>
+									<li class="inline-block">27<p>廿一</p></li>
+									<li class="inline-block">28<p>廿二</p></li>
+									<li class="inline-block">29<p>廿三</p></li>
+									<li class="inline-block">30<p>廿四</p></li>
+									<li class="inline-block"></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="rank inline-block">
+						<h3>汽车行业品牌榜</h3>
+						<ul>
+							<li class="title">
+								<h4>排名</h4>
+								<p>品牌</p>
+								<div class="search-point">
+									<span>搜索指数</span>
+								</div>
+							</li>
+							<li>
+								<h4>1</h4>
+								<p>大众</p>
+								<div class="search-point">
+									<span>48912001</span>
+									<progress value="88" max="100"></progress>
+								</div>
+							</li>
+							<li>
+								<h4>2</h4>
+								<p>丰田</p>
+								<div class="search-point">
+									<span>29307333</span>
+									<progress value="75" max="100"></progress>
+								</div>
+							</li>
+							<li>
+								<h4>3</h4>
+								<p>奥迪</p>
+								<div class="search-point">
+									<span>23139070</span>
+									<progress value="65" max="100"></progress>
+								</div>
+							</li>
+							<li>
+								<h4>4</h4>
+								<p>本田</p>
+								<div class="search-point">
+									<span>22885564</span>
+									<progress value="60" max="100"></progress>
+								</div>
+							</li>
+							<li>
+								<h4>5</h4>
+								<p>福特</p>
+								<div class="search-point">
+									<span>22324792</span>
+									<progress value="55" max="100"></progress>
+								</div>
+							</li>
+							<li>
+								<h4>6</h4>
+								<p>宝马</p>
+								<div class="search-point">
+									<span>21444077</span>
+									<progress value="50" max="100"></progress>
+								</div>
+							</li>
+							<li>
+								<h4>7</h4>
+								<p>现代</p>
+								<div class="search-point">
+									<span>20114969</span>
+									<progress value="46" max="100"></progress>
+								</div>
+							</li>
+							<li>
+								<h4>8</h4>
+								<p>起亚</p>
+								<div class="search-point">
+									<span>19251680</span>
+									<progress value="43" max="100"></progress>
+								</div>
+							</li>
+							<li>
+								<h4>9</h4>
+								<p>奔驰</p>
+								<div class="search-point">
+									<span>19172837</span>
+									<progress value="40" max="100"></progress>
+								</div>
+							</li>
+							<li>
+								<h4>10</h4>
+								<p>别克</p>
+								<div class="search-point">
+									<span>18544027</span>
+									<progress value="35" max="100"></progress>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
