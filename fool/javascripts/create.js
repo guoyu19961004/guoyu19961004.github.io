@@ -1,7 +1,9 @@
 var name,
 	href,
-	male = ['男星1', '男星2', '男星3', '男星4', '男星5', '男星6', '男星7', '男星8', '男星9', '男星10'],
-	female = ['女星1', '女星2', '女星3', '女星4', '女星5', '女星6', '女星7', '女星8', '女星9', '女星10'];
+	sex,
+	hearts = document.getElementsByClassName("heart"),
+	male = ['吴彦祖', '张震', '王凯', '吴磊', '吴亦凡', '鹿晗', '张艺兴', '王俊凯', '易烊千玺', '权志龙', '黄子韬', '胡歌', '宋仲基'],
+	female = ['苍老师', '柳岩', '罗玉凤', '林志玲', '波多野结衣', '容嬷嬷'];
 //随机一个从min~max的整数
 function randomNumber(min, max) {
 	var cha = max - min;
@@ -9,25 +11,39 @@ function randomNumber(min, max) {
 	return randomNumber;
 }
 //根据性别随机男星/女星姓名
-function randomName(sex) {
+function randomName(sex, min, max) {
 	if (sex === "male") {
-		name = female[randomNumber(0, 9)];
+		name = female[randomNumber(min, max)];
 	} else {
-		name = male[randomNumber(0, 9)];
+		name = male[randomNumber(min, max)];
 	}
 }
 
+function showMaleHeart() {
+	sex = "male";
+	hearts[0].style.opacity = "1";
+	hearts[1].style.opacity = "0";
+}
+
+function showFemaleHeart() {
+	sex = "female";
+	hearts[1].style.opacity = "1";
+	hearts[0].style.opacity = "0";
+}
+
 function checked() {
-	if (document.forms[0].sex.value == "male") {
-		randomName("male");
-		href=encodeURI("show.html?sex=male&name="+name+"&jump=ok");
+	if (sex == "male") {
+		randomName("male",0,female.length-1);
+		href = encodeURI("show.html?sex=" + sex + "&name=" + name + "&jump=ok");
 		window.location.href = href;
-	} else if (document.forms[0].sex.value == "female") {
-		randomName("female");
-		href=encodeURI("show.html?sex=female&name="+name+"&jump=ok");
+	} else if (sex == "female") {
+		randomName("female",0,male.length-1);
+		href = encodeURI("show.html?sex=" + sex + "&name=" + name + "&jump=ok");
 		window.location.href = href;
 	} else {
 		alert("请选择性别！");
 	}
 }
-document.getElementsByTagName('button')[0].addEventListener("click",checked,false);
+document.getElementsByTagName('label')[0].addEventListener("touchstart", showMaleHeart, false);
+document.getElementsByTagName('label')[1].addEventListener("touchstart", showFemaleHeart, false);
+document.getElementsByTagName('button')[0].addEventListener("touchstart", checked, false);

@@ -74,31 +74,35 @@ html {
   font-size: 62.5%;
   font-family: "STHeiti Light",sans-serif;
   background-color: #feb8c9;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  outline: 0;
 }
 
-/* line 15, ../sass/create.scss */
+/* line 18, ../sass/create.scss */
 .img-wrap {
-  width: 95%;
-  margin: 10px auto 0 auto;
+  height: 50%;
+  margin-top: 1rem;
+  text-align: center;
 }
 
-/* line 19, ../sass/create.scss */
+/* line 23, ../sass/create.scss */
 .img-wrap img {
-  width: 100%;
+  height: 100%;
 }
 
-/* line 22, ../sass/create.scss */
+/* line 26, ../sass/create.scss */
 form {
   margin-top: 3rem;
   text-align: center;
 }
 
-/* line 26, ../sass/create.scss */
+/* line 30, ../sass/create.scss */
 input[type="radio"] {
   display: none;
 }
 
-/* line 29, ../sass/create.scss */
+/* line 33, ../sass/create.scss */
 span {
   font-size: 1.5rem;
   color: #434343;
@@ -107,8 +111,9 @@ span {
   vertical-align: middle;
 }
 
-/* line 36, ../sass/create.scss */
+/* line 40, ../sass/create.scss */
 label {
+  position: relative;
   width: 5rem;
   height: 2.5rem;
   line-height: 2.5rem;
@@ -117,24 +122,36 @@ label {
   display: inline-block;
   vertical-align: middle;
   text-align: center;
-  -moz-border-radius: 0.3rem;
-  -webkit-border-radius: 0.3rem;
-  border-radius: 0.3rem;
+  -moz-border-radius: 1.2rem;
+  -webkit-border-radius: 1.2rem;
+  border-radius: 1.2rem;
+}
+/* line 51, ../sass/create.scss */
+.heart {
+  position: absolute;
+  top: -1em;
+  left: -1rem;
+  opacity: 0;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
-/* line 47, ../sass/create.scss */
+/* line 59, ../sass/create.scss */
 label.male-label {
   margin: 0 1.2rem 0 3.1rem;
   background-color: #b3ecf8;
 }
 
-/* line 51, ../sass/create.scss */
+/* line 63, ../sass/create.scss */
 label.female-label {
   background-color: #fed4d5;
 }
 
-/* line 54, ../sass/create.scss */
+/* line 66, ../sass/create.scss */
 button {
+  position: relative;
   width: 16rem;
   height: 4.4rem;
   font-size: 1.5rem;
@@ -143,7 +160,15 @@ button {
   display: block;
   margin: 5rem auto 0 auto;
   border: none;
-  -moz-border-radius: 0.5rem;
-  -webkit-border-radius: 0.5rem;
-  border-radius: 0.5rem;
+  -moz-border-radius: 2.2rem;
+  -webkit-border-radius: 2.2rem;
+  border-radius: 2.2rem;
+}
+/* line 77, ../sass/create.scss */
+.button-img {
+  position: absolute;
+  top: -2.8rem;
+  left: 0.8rem;
+  width: 3.7rem;
+  height: 4.2rem;
 }

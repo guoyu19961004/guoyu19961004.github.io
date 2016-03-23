@@ -1,11 +1,15 @@
 var weddingNext = document.getElementById("next"),
 	wedding = document.getElementById("wedding"),
 	share = document.getElementById("share"),
-	create = document.getElementById("create");
+	create = document.getElementById("create"),
+	content = document.getElementById('content'),
+	weddingPic = document.getElementById('wedding-pic-wrap'),
+	showPic = document.getElementById('show-pic'),
+	close = document.getElementById('close');
 
 //地址栏正则表达式
 function getQueryString(name) {
-	var href=decodeURI(window.location.href);
+	var href = decodeURI(window.location.search);
 	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
 	var r = href.substr(1).match(reg);
 	if (r !== null) return unescape(r[2]);
@@ -19,17 +23,13 @@ function judgeSex() {
 		if (sex === "male") {
 			document.getElementById("it1").innerHTML = "她";
 			document.getElementById("it2").innerHTML = "她";
-		} else {
-			state.sex = "female";
-			document.getElementById("it1").innerHTML = "他";
-			document.getElementById("it2").innerHTML = "他";
 		}
 	}
 }
 
 function judgeName() {
 	var name = decodeURI(getQueryString("name"));
-	if (name !== null && name.toString().length > 1) {
+	if (name && name.toString().length > 1) {
 		document.getElementById("name").innerHTML = name;
 	}
 }
@@ -44,10 +44,30 @@ function judgeUser() {
 }
 
 function hideWedding() {
-	wedding.style.cssText = "top:-150%;";
+	wedding.style.cssText = "top:-100%;";
+	content.style.cssText = "top:0;";
+	document.getElementsByClassName("text")[0].style.animation = "showText 1s ease-in-out 0.3s";
+	document.getElementsByClassName("text")[0].style.WebkitAnimation = "showText 1s ease-in-out 0.3s";
 }
+
+function showWeddingPic() {
+	weddingPic.style.opacity = "1";
+}
+
+function hideWeddingPic() {
+	weddingPic.style.opacity = "0";
+}
+
+function jumpCreate() {
+	window.location.href = "create.html";
+}
+
 window.onload = function() {
 	judgeUser();
 	window.history.replaceState(null, null, "?sex=" + getQueryString("sex") + "&name=" + getQueryString("name"));
 };
-weddingNext.addEventListener("click", hideWedding, false);
+
+create.addEventListener("touchstart", jumpCreate, false);
+weddingNext.addEventListener("touchstart", hideWedding, false);
+showPic.addEventListener("touchstart", showWeddingPic, false);
+showPic.addEventListener("touchend", hideWeddingPic, false);

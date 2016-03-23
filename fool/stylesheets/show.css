@@ -69,110 +69,159 @@ html {
   height: 100%;
   font-size: 62.5%;
   font-family: "STHeiti Light",sans-serif;
-  background: #feb8c9 url("../images/follwer_bg.png") no-repeat;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
+  overflow: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  outline: 0;
 }
 
-/* line 11, ../sass/show.scss */
+/* line 13, ../sass/show.scss */
 body {
+  position: relative;
   width: 100%;
   height: 100%;
-  z-index: 2;
+  overflow: hidden;
 }
 
-/* line 16, ../sass/show.scss */
+@-moz-keyframes showText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes showText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes showText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* line 27, ../sass/show.scss */
 .wedding {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: #feb8c9;
   text-align: center;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -moz-transition: top 0.5s ease-in-out;
+  -o-transition: top 0.5s ease-in-out;
+  -webkit-transition: top 0.5s ease-in-out;
+  transition: top 0.5s ease-in-out;
   z-index: 3;
 }
 
-/* line 25, ../sass/show.scss */
+/* line 36, ../sass/show.scss */
 .wedding-img {
-  width: 100%;
+  height: 50%;
+  text-align: center;
 }
-/* line 27, ../sass/show.scss */
+/* line 39, ../sass/show.scss */
 .wedding-img img {
-  width: 100%;
+  height: 100%;
 }
 
-/* line 31, ../sass/show.scss */
+/* line 43, ../sass/show.scss */
 .wedding-text {
   margin-top: 10%;
+  height: 25%;
+  -moz-animation: showText 1s ease-in-out;
+  -webkit-animation: showText 1s ease-in-out;
+  animation: showText 1s ease-in-out;
 }
-/* line 33, ../sass/show.scss */
+/* line 47, ../sass/show.scss */
 .wedding-text p {
   margin-bottom: 1.3rem;
   font-size: 1.5rem;
   color: #fff;
 }
 
-/* line 39, ../sass/show.scss */
+/* line 53, ../sass/show.scss */
 .button {
   width: 2.9rem;
   height: 1.7rem;
-  margin: 15% auto 0 auto;
+  margin: 10% auto 0 auto;
 }
-/* line 43, ../sass/show.scss */
+/* line 57, ../sass/show.scss */
 .button img {
   width: 100%;
   height: 100%;
 }
 
-/* line 48, ../sass/show.scss */
+/* line 62, ../sass/show.scss */
 .wedding-pic-wrap {
   position: absolute;
   width: 100%;
-  height: 100%;
-  background-color: #aaa;
-  z-index: 1;
+  height: 68%;
+  z-index: 2;
+  background-color: #feb8c9;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
 
-/* line 56, ../sass/show.scss */
+/* line 70, ../sass/show.scss */
 .wedding-pic {
-  width: 90%;
+  height: 80%;
+  margin-top: 10%;
+  text-align: center;
 }
-/* line 58, ../sass/show.scss */
+/* line 74, ../sass/show.scss */
 .wedding-pic img {
-  width: 100%;
+  height: 100%;
 }
 
-/* line 62, ../sass/show.scss */
+/* line 78, ../sass/show.scss */
+.content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #feb8c9 url("../images/follwer_bg.png") no-repeat;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  -moz-transition: top 0.5s ease-in-out;
+  -o-transition: top 0.5s ease-in-out;
+  -webkit-transition: top 0.5s ease-in-out;
+  transition: top 0.5s ease-in-out;
+  z-index: 1;
+}
+
+/* line 87, ../sass/show.scss */
 .text {
   height: 50%;
   padding-top: 20%;
   text-align: center;
 }
-/* line 66, ../sass/show.scss */
+/* line 91, ../sass/show.scss */
 .text p {
   margin-bottom: 1.9rem;
   font-size: 1.5rem;
   color: #fff;
 }
-/* line 71, ../sass/show.scss */
+/* line 96, ../sass/show.scss */
 .text span {
   margin: 0 5px;
 }
 
-/* line 75, ../sass/show.scss */
+/* line 100, ../sass/show.scss */
 .check {
-  margin-top: 10%;
+  margin-top: 15%;
 }
 
-/* line 78, ../sass/show.scss */
+/* line 103, ../sass/show.scss */
 button {
+  position: relative;
   margin: 2.5rem auto 0 auto;
   width: 16rem;
   height: 4.4rem;
@@ -181,7 +230,16 @@ button {
   background-color: #b3ecf8;
   display: block;
   border: none;
-  -moz-border-radius: 0.5rem;
-  -webkit-border-radius: 0.5rem;
-  border-radius: 0.5rem;
+  -moz-border-radius: 2.2rem;
+  -webkit-border-radius: 2.2rem;
+  border-radius: 2.2rem;
+}
+/* line 114, ../sass/show.scss */
+.button-img {
+  position: absolute;
+  top: -2.8rem;
+  left: 0.8rem;
+  width: 3.7rem;
+  height: 4.2rem;
+  z-index: 5;
 }
