@@ -134,7 +134,7 @@ label.female-label {
 }
 
 /* line 54, ../sass/create.scss */
-input[type="submit"] {
+button {
   width: 16rem;
   height: 4.4rem;
   font-size: 1.5rem;
