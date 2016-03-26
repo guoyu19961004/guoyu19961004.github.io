@@ -75,8 +75,15 @@ function hideWeddingPic() {
 
 function showShare() {
 	shareBg.style.display = "block";
+	shareBg.addEventListener("touchstart", hideShare, false);
+	share.removeEventListener("touchstart", showShare, false);
 }
 
+function hideShare() {
+	shareBg.style.display = "none";
+	share.addEventListener("touchstart", showShare, false);
+	shareBg.removeEventListener("touchstart", hideShare, false);
+}
 function jumpCreate() {
 	window.location.href = "create.html";
 }
