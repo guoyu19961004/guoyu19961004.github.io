@@ -122,11 +122,12 @@ label {
   display: inline-block;
   vertical-align: middle;
   text-align: center;
+  background-color: #b3ecf8;
   -moz-border-radius: 1.2rem;
   -webkit-border-radius: 1.2rem;
   border-radius: 1.2rem;
 }
-/* line 51, ../sass/create.scss */
+/* line 52, ../sass/create.scss */
 .heart {
   position: absolute;
   top: -1em;
@@ -138,18 +139,12 @@ label {
   transition: opacity 0.5s ease-in-out;
 }
 
-/* line 59, ../sass/create.scss */
+/* line 60, ../sass/create.scss */
 label.male-label {
   margin: 0 1.2rem 0 3.1rem;
-  background-color: #b3ecf8;
 }
 
 /* line 63, ../sass/create.scss */
-label.female-label {
-  background-color: #fed4d5;
-}
-
-/* line 66, ../sass/create.scss */
 button {
   position: relative;
   width: 16rem;
@@ -164,7 +159,7 @@ button {
   -webkit-border-radius: 2.2rem;
   border-radius: 2.2rem;
 }
-/* line 77, ../sass/create.scss */
+/* line 74, ../sass/create.scss */
 .button-img {
   position: absolute;
   top: -2.8rem;

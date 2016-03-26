@@ -1,6 +1,7 @@
 var weddingNext = document.getElementById("next"),
 	wedding = document.getElementById("wedding"),
 	share = document.getElementById("share"),
+	shareBg = document.getElementById('share-bg'),
 	create = document.getElementById("create"),
 	content = document.getElementById('content'),
 	weddingPic = document.getElementById('wedding-pic-wrap'),
@@ -44,8 +45,8 @@ function judgeUser() {
 }
 
 function hideWedding() {
-	wedding.style.cssText = "top:-100%;";
-	content.style.cssText = "top:0;";
+	wedding.style.cssText = "-moz-transform: translateY(-100%);-ms-transform: translateY(-100%);-webkit-transform: translateY(-100%);transform: translateY(-100%);";
+	content.style.cssText = "-moz-transform: translateY(0);-ms-transform: translateY(0);-webkit-transform: translateY(0);transform: translateY(0);";
 	document.getElementsByClassName("text")[0].style.animation = "showText 1s ease-in-out 0.3s";
 	document.getElementsByClassName("text")[0].style.WebkitAnimation = "showText 1s ease-in-out 0.3s";
 }
@@ -58,6 +59,14 @@ function hideWeddingPic() {
 	weddingPic.style.opacity = "0";
 }
 
+function showShare() {
+	shareBg.style.display = "block;";
+}
+
+function hideShare() {
+	shareBg.style.display = "none";
+}
+
 function jumpCreate() {
 	window.location.href = "create.html";
 }
@@ -66,7 +75,7 @@ window.onload = function() {
 	judgeUser();
 	window.history.replaceState(null, null, "?sex=" + getQueryString("sex") + "&name=" + getQueryString("name"));
 };
-
+share.addEventListener("touchstart",showShare,false);
 create.addEventListener("touchstart", jumpCreate, false);
 weddingNext.addEventListener("touchstart", hideWedding, false);
 showPic.addEventListener("touchstart", showWeddingPic, false);
