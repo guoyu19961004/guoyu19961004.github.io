@@ -6,7 +6,8 @@ var weddingNext = document.getElementById("next"),
 	content = document.getElementById('content'),
 	weddingPic = document.getElementById('wedding-pic-wrap'),
 	showPic = document.getElementById('show-pic'),
-	close = document.getElementById('close');
+	close = document.getElementById('close'),
+	startY, removeY;
 
 //地址栏正则表达式
 function getQueryString(name) {
@@ -49,14 +50,27 @@ function hideWedding() {
 	content.style.cssText = "-moz-transform: translateY(0);-ms-transform: translateY(0);-webkit-transform: translateY(0);transform: translateY(0);";
 	document.getElementsByClassName("text")[0].style.animation = "showText 1s ease-in-out 0.3s";
 	document.getElementsByClassName("text")[0].style.WebkitAnimation = "showText 1s ease-in-out 0.3s";
+	setTimeout(function () {
+		content.addEventListener("touchend", touchEnd, false);
+	},1300);
+	wedding.removeEventListener("touchend", touchEnd, false);
+}
+
+function showWedding() {
+	content.style.cssText = "-moz-transform: translateY(100%);-ms-transform: translateY(100%);-webkit-transform: translateY(100%);transform: translateY(100%);";
+	wedding.style.cssText = "-moz-transform: translateY(0);-ms-transform: translateY(0);-webkit-transform: translateY(0);transform: translateY(0);";
+	setTimeout(function () {
+		wedding.addEventListener("touchend", touchEnd, false);
+	},500);
+	content.addEventListener("touchend", touchEnd, false);
 }
 
 function showWeddingPic() {
-	weddingPic.style.opacity = "1";
+	weddingPic.style.display = "block";
 }
 
 function hideWeddingPic() {
-	weddingPic.style.opacity = "0";
+	weddingPic.style.display = "none";
 }
 
 function showShare() {
@@ -67,12 +81,41 @@ function jumpCreate() {
 	window.location.href = "create.html";
 }
 
+function touchStart(event) {
+	event.preventDefault();
+	if (!event.touches.length) return;
+	var touch = event.touches[0];
+	startY = touch.pageY;
+}
+
+function touchMove(event) {
+	event.preventDefault();
+	if (!event.touches.length) return;
+	var touch = event.touches[0];
+	removeY = touch.pageY - startY;
+}
+
+function touchEnd(event) {
+	if (removeY > 0) {
+		showWedding();
+	} else if (removeY < 0) {
+		hideWedding();
+	}
+	else return;
+}
 window.onload = function() {
 	judgeUser();
 	window.history.replaceState(null, null, "?sex=" + getQueryString("sex") + "&name=" + getQueryString("name"));
 };
-share.addEventListener("touchstart",showShare,false);
+share.addEventListener("touchstart", showShare, false);
 create.addEventListener("touchstart", jumpCreate, false);
 weddingNext.addEventListener("touchstart", hideWedding, false);
 showPic.addEventListener("touchstart", showWeddingPic, false);
 showPic.addEventListener("touchend", hideWeddingPic, false);
+wedding.addEventListener("touchstart", touchStart, false);
+wedding.addEventListener("touchmove", touchMove, false);
+content.addEventListener("touchstart", touchStart, false);
+content.addEventListener("touchmove", touchMove, false);
+setTimeout(function () {
+	wedding.addEventListener("touchend", touchEnd, false);
+},1000);

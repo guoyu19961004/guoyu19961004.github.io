@@ -186,8 +186,7 @@ body {
   height: 68%;
   z-index: 2;
   background-color: #feb8c9;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
+  display: none;
 }
 
 /* line 87, ../sass/show.scss */
