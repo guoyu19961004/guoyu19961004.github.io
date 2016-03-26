@@ -60,11 +60,7 @@ function hideWeddingPic() {
 }
 
 function showShare() {
-	shareBg.style.display = "block;";
-}
-
-function hideShare() {
-	shareBg.style.display = "none";
+	shareBg.style.display = "block";
 }
 
 function jumpCreate() {
