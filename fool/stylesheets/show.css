@@ -69,13 +69,14 @@ html {
   height: 100%;
   font-size: 62.5%;
   font-family: "STHeiti Light",sans-serif;
+  background-color: #feb8c9;
   overflow: hidden;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   outline: 0;
 }
 
-/* line 13, ../sass/show.scss */
+/* line 14, ../sass/show.scss */
 body {
   position: relative;
   width: 100%;
@@ -107,7 +108,7 @@ body {
     opacity: 1;
   }
 }
-/* line 27, ../sass/show.scss */
+/* line 28, ../sass/show.scss */
 .share {
   position: absolute;
   width: 100%;
@@ -116,19 +117,19 @@ body {
   z-index: 5;
   display: none;
 }
-/* line 33, ../sass/show.scss */
+/* line 34, ../sass/show.scss */
 .share .img-wrap {
   position: fixed;
   top: 0;
   right: 2rem;
   width: 120px;
 }
-/* line 38, ../sass/show.scss */
+/* line 39, ../sass/show.scss */
 .share .img-wrap img {
   width: 100%;
 }
 
-/* line 44, ../sass/show.scss */
+/* line 45, ../sass/show.scss */
 .wedding {
   position: absolute;
   width: 100%;
@@ -142,17 +143,17 @@ body {
   z-index: 3;
 }
 
-/* line 53, ../sass/show.scss */
+/* line 54, ../sass/show.scss */
 .wedding-img {
   height: 50%;
   text-align: center;
 }
-/* line 56, ../sass/show.scss */
+/* line 57, ../sass/show.scss */
 .wedding-img img {
   height: 100%;
 }
 
-/* line 60, ../sass/show.scss */
+/* line 61, ../sass/show.scss */
 .wedding-text {
   margin-top: 10%;
   height: 25%;
@@ -160,26 +161,26 @@ body {
   -webkit-animation: showText 1s ease-in-out;
   animation: showText 1s ease-in-out;
 }
-/* line 64, ../sass/show.scss */
+/* line 65, ../sass/show.scss */
 .wedding-text p {
   margin-bottom: 1.3rem;
   font-size: 1.5rem;
   color: #fff;
 }
 
-/* line 70, ../sass/show.scss */
+/* line 71, ../sass/show.scss */
 .button {
   width: 2.9rem;
   height: 1.7rem;
   margin: 10% auto 0 auto;
 }
-/* line 74, ../sass/show.scss */
+/* line 75, ../sass/show.scss */
 .button img {
   width: 100%;
   height: 100%;
 }
 
-/* line 79, ../sass/show.scss */
+/* line 80, ../sass/show.scss */
 .wedding-pic-wrap {
   position: absolute;
   width: 100%;
@@ -189,18 +190,18 @@ body {
   display: none;
 }
 
-/* line 87, ../sass/show.scss */
+/* line 88, ../sass/show.scss */
 .wedding-pic {
   height: 80%;
   margin-top: 10%;
   text-align: center;
 }
-/* line 91, ../sass/show.scss */
+/* line 92, ../sass/show.scss */
 .wedding-pic img {
   height: 100%;
 }
 
-/* line 95, ../sass/show.scss */
+/* line 96, ../sass/show.scss */
 .content {
   width: 100%;
   height: 100%;
@@ -217,31 +218,31 @@ body {
   z-index: 1;
 }
 
-/* line 104, ../sass/show.scss */
+/* line 105, ../sass/show.scss */
 .text {
   height: 50%;
   padding-top: 20%;
   text-align: center;
 }
-/* line 108, ../sass/show.scss */
+/* line 109, ../sass/show.scss */
 .text p {
   margin-bottom: 1.9rem;
   font-size: 1.5rem;
   color: #fff;
 }
-/* line 113, ../sass/show.scss */
+/* line 114, ../sass/show.scss */
 .text span {
   font-size: 1.8rem;
   margin: 0 0.2rem;
   color: #b3ecf8;
 }
 
-/* line 119, ../sass/show.scss */
+/* line 120, ../sass/show.scss */
 .check {
   margin-top: 15%;
 }
 
-/* line 122, ../sass/show.scss */
+/* line 123, ../sass/show.scss */
 button {
   position: relative;
   margin: 2.5rem auto 0 auto;
@@ -256,7 +257,7 @@ button {
   -webkit-border-radius: 2.2rem;
   border-radius: 2.2rem;
 }
-/* line 133, ../sass/show.scss */
+/* line 134, ../sass/show.scss */
 .button-img {
   position: absolute;
   top: -2.8rem;
