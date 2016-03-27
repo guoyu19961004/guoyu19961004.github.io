@@ -3,7 +3,7 @@ var name,
 	sex,
 	hearts = document.getElementsByClassName("heart"),
 	male = ['吴彦祖', '张震', '王凯', '吴磊', '吴亦凡', '鹿晗', '张艺兴', '王俊凯', '易烊千玺', '权志龙', '黄子韬', '胡歌', '宋仲基'],
-	female = ['苍老师', '柳岩', '罗玉凤', '林志玲', '波多野结衣', '容嬷嬷'];
+	female = ['苍老师', '柳岩', '罗玉凤', '林志玲', '波多野结衣', '容嬷嬷','小泽玛利亚','范冰冰','刘亦菲','汤唯','贾玲','杨幂'];
 //随机一个从min~max的整数
 function randomNumber(min, max) {
 	var cha = max - min;
@@ -44,6 +44,6 @@ function checked() {
 		alert("请选择性别！");
 	}
 }
-document.getElementsByTagName('label')[0].addEventListener("touchstart", showMaleHeart, false);
-document.getElementsByTagName('label')[1].addEventListener("touchstart", showFemaleHeart, false);
-document.getElementsByTagName('button')[0].addEventListener("touchstart", checked, false);
+document.getElementsByTagName('label')[0].addEventListener("touchend", showMaleHeart, false);
+document.getElementsByTagName('label')[1].addEventListener("touchend", showFemaleHeart, false);
+document.getElementsByTagName('button')[0].addEventListener("touchend", checked, false);

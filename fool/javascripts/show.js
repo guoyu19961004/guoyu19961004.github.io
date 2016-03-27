@@ -114,10 +114,10 @@ window.onload = function() {
 	judgeUser();
 	window.history.replaceState(null, null, "?sex=" + getQueryString("sex") + "&name=" + getQueryString("name"));
 };
-share.addEventListener("touchstart", showShare, false);
-create.addEventListener("touchstart", jumpCreate, false);
-weddingNext.addEventListener("touchstart", hideWedding, false);
-showPic.addEventListener("touchstart", showWeddingPic, false);
+share.addEventListener("touchend", showShare, false);
+create.addEventListener("touchend", jumpCreate, false);
+weddingNext.addEventListener("touchend", hideWedding, false);
+showPic.addEventListener("touchend", showWeddingPic, false);
 showPic.addEventListener("touchend", hideWeddingPic, false);
 wedding.addEventListener("touchstart", touchStart, false);
 wedding.addEventListener("touchmove", touchMove, false);
