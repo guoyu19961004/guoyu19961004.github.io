@@ -117,7 +117,7 @@ window.onload = function() {
 share.addEventListener("touchend", showShare, false);
 create.addEventListener("touchend", jumpCreate, false);
 weddingNext.addEventListener("touchend", hideWedding, false);
-showPic.addEventListener("touchend", showWeddingPic, false);
+showPic.addEventListener("touchstart", showWeddingPic, false);
 showPic.addEventListener("touchend", hideWeddingPic, false);
 wedding.addEventListener("touchstart", touchStart, false);
 wedding.addEventListener("touchmove", touchMove, false);
