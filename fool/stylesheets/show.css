@@ -73,7 +73,7 @@ html {
   overflow: hidden;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  outline: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* line 14, ../sass/show.scss */

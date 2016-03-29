@@ -76,7 +76,7 @@ html {
   background-color: #feb8c9;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  outline: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* line 18, ../sass/create.scss */
