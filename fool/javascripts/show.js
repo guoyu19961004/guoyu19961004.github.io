@@ -40,6 +40,7 @@ function judgeUser() {
 	if (getQueryString("jump")) {
 		share.style.display = "block";
 		create.style.display = "none";
+		window.history.replaceState(null, null, "?sex=" + getQueryString("sex") + "&name=" + getQueryString("name"));
 	}
 	judgeSex();
 	judgeName();
@@ -110,10 +111,12 @@ function touchEnd(event) {
 	}
 	else return;
 }
-window.onload = function() {
-	judgeUser();
-	window.history.replaceState(null, null, "?sex=" + getQueryString("sex") + "&name=" + getQueryString("name"));
-};
+// window.onload = function() {
+// 	judgeUser();
+// 	console.log('onload.....');
+// };
+judgeUser();
+//window.history.replaceState(null, null, "?sex=" + getQueryString("sex") + "&name=" + getQueryString("name"));
 share.addEventListener("touchend", showShare, false);
 create.addEventListener("touchend", jumpCreate, false);
 weddingNext.addEventListener("touchend", hideWedding, false);
