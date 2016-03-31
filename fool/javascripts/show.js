@@ -52,18 +52,18 @@ function hideWedding() {
 	content.style.cssText = "-moz-transform: translateY(0);-ms-transform: translateY(0);-webkit-transform: translateY(0);transform: translateY(0);";
 	document.getElementsByClassName("text")[0].style.animation = "showText 1s ease-in-out 0.3s";
 	document.getElementsByClassName("text")[0].style.WebkitAnimation = "showText 1s ease-in-out 0.3s";
-	setTimeout(function () {
+	setTimeout(function() {
 		content.addEventListener("touchend", touchEnd, false);
-	},1300);
+	}, 1300);
 	wedding.removeEventListener("touchend", touchEnd, false);
 }
 
 function showWedding() {
 	content.style.cssText = "-moz-transform: translateY(100%);-ms-transform: translateY(100%);-webkit-transform: translateY(100%);transform: translateY(100%);";
 	wedding.style.cssText = "-moz-transform: translateY(0);-ms-transform: translateY(0);-webkit-transform: translateY(0);transform: translateY(0);";
-	setTimeout(function () {
+	setTimeout(function() {
 		wedding.addEventListener("touchend", touchEnd, false);
-	},500);
+	}, 500);
 	content.addEventListener("touchend", touchEnd, false);
 }
 
@@ -86,6 +86,7 @@ function hideShare() {
 	share.addEventListener("touchstart", showShare, false);
 	shareBg.removeEventListener("touchstart", hideShare, false);
 }
+
 function jumpCreate() {
 	window.location.href = "create.html";
 }
@@ -109,14 +110,21 @@ function touchEnd(event) {
 		showWedding();
 	} else if (removeY < 0) {
 		hideWedding();
-	}
-	else return;
+	} else return;
 }
 // window.onload = function() {
 // 	judgeUser();
 // 	console.log('onload.....');
 // };
 judgeUser();
+window.onbeforeunload = function() {
+	alert("===onbeforeunload===");
+	if (event.clientX > document.body.clientWidth && event.clientY < 0 || event.altKey) {
+		alert("你关闭了浏览器");
+	} else {
+		alert("你正在刷新页面");
+	}
+};
 //window.history.replaceState(null, null, "?sex=" + getQueryString("sex") + "&name=" + getQueryString("name"));
 share.addEventListener("touchend", showShare, false);
 create.addEventListener("touchend", jumpCreate, false);
@@ -127,6 +135,6 @@ wedding.addEventListener("touchstart", touchStart, false);
 wedding.addEventListener("touchmove", touchMove, false);
 content.addEventListener("touchstart", touchStart, false);
 content.addEventListener("touchmove", touchMove, false);
-setTimeout(function () {
+setTimeout(function() {
 	wedding.addEventListener("touchend", touchEnd, false);
-},1000);
+}, 1000);
