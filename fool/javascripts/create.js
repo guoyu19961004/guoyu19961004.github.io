@@ -44,6 +44,7 @@ function checked() {
 		alert("请选择性别！");
 	}
 }
+alert(window.history.length);
 document.getElementsByTagName('label')[0].addEventListener("touchend", showMaleHeart, false);
 document.getElementsByTagName('label')[1].addEventListener("touchend", showFemaleHeart, false);
 document.getElementsByTagName('button')[0].addEventListener("touchend", checked, false);

@@ -37,11 +37,11 @@ function judgeName() {
 }
 //判断用户从哪里进入,并完成转换
 function judgeUser() {
+	alert(window.history.length);
 	if (getQueryString("jump")) {
 		share.style.display = "block";
 		create.style.display = "none";
 		window.history.replaceState(null, null, "?sex=" + getQueryString("sex") + "&name=" + getQueryString("name"));
-		alert(window.location.href);
 	}
 	judgeSex();
 	judgeName();
@@ -117,14 +117,6 @@ function touchEnd(event) {
 // 	console.log('onload.....');
 // };
 judgeUser();
-window.onbeforeunload = function() {
-	alert("===onbeforeunload===");
-	if (event.clientX > document.body.clientWidth && event.clientY < 0 || event.altKey) {
-		alert("你关闭了浏览器");
-	} else {
-		alert("你正在刷新页面");
-	}
-};
 //window.history.replaceState(null, null, "?sex=" + getQueryString("sex") + "&name=" + getQueryString("name"));
 share.addEventListener("touchend", showShare, false);
 create.addEventListener("touchend", jumpCreate, false);
