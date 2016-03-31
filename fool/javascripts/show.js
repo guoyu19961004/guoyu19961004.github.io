@@ -40,7 +40,7 @@ function judgeUser() {
 	if (getQueryString("jump")) {
 		share.style.display = "block";
 		create.style.display = "none";
-		window.history.replaceState(null, null, "?sex=" + getQueryString("sex") + "&name=" + getQueryString("name"));
+		window.history.pushState(null, null, "?sex=" + getQueryString("sex") + "&name=" + getQueryString("name"));
 	}
 	judgeSex();
 	judgeName();
