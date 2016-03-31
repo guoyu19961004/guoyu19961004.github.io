@@ -38,10 +38,13 @@ function judgeName() {
 //判断用户从哪里进入,并完成转换
 function judgeUser() {
 	alert(window.history.length);
-	if (window.history.length == 2) {
+	if (window.history.length == 1) {
+		create.style.display = "block";
+		share.style.display = "none";
+	}
+	else {
 		share.style.display = "block";
 		create.style.display = "none";
-		//window.history.replaceState(null, null, "?sex=" + getQueryString("sex") + "&name=" + getQueryString("name"));
 	}
 	judgeSex();
 	judgeName();
