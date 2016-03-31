@@ -34,11 +34,11 @@ function showFemaleHeart() {
 function checked() {
 	if (sex == "male") {
 		randomName("male",0,female.length-1);
-		href = encodeURI("show.html?sex=" + sex + "&name=" + name + "&jump=ok");
+		href = encodeURI("show.html?sex=" + sex + "&name=" + name);
 		window.location.href = href;
 	} else if (sex == "female") {
 		randomName("female",0,male.length-1);
-		href = encodeURI("show.html?sex=" + sex + "&name=" + name + "&jump=ok");
+		href = encodeURI("show.html?sex=" + sex + "&name=" + name);
 		window.location.href = href;
 	} else {
 		alert("请选择性别！");
